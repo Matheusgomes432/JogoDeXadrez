@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using tabuleiro;
 
 namespace xadrez_console.tabuleiro
 {
@@ -10,17 +11,22 @@ namespace xadrez_console.tabuleiro
     {
         public int Linhas { get; set; }
         public int Colunas { get; set; }
-        private peca[,] pecas;
+        private Peca[,] pecas;
 
         public Tabuleiro(int linhas, int colunas)
         {
             Linhas = linhas;
             Colunas = colunas;
-            pecas = new peca[colunas, linhas];
+            pecas = new Peca[colunas, linhas];
         }
 
-        public peca peca(int linha, int coluna) {
+        public Peca peca(int linha, int coluna) {
            return pecas[linha, coluna];
+        }
+        public void colocarPeca(Peca p, Posicao pos)
+        {
+            pecas[pos.Linha, pos.Coluna] = p;
+            p.posicao = pos;
         }
     }
 }
