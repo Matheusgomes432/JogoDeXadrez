@@ -7,19 +7,19 @@ using tabuleiro;
 
 namespace xadrez
 {
-     class PoiscaoXadrez
+     class PosicaoXadrez
     {
         public char Coluna { get; set; }
         public int Linha { get; set; }
 
-        public PoiscaoXadrez(char coluna, int linha)
+        public PosicaoXadrez(char coluna, int linha)
         {
             Coluna = coluna;
             Linha = linha;
         }
         public Posicao toPosicao()
         {
-            return new Posicao(8 - Linha, 'a' - Coluna );
+            return new Posicao(8 - Linha, Coluna - 'a');
         }
         public override string ToString()
         {
