@@ -17,7 +17,7 @@ namespace xadrez_console.tabuleiro
         {
             Linhas = linhas;
             Colunas = colunas;
-            pecas = new Peca[colunas, linhas];
+            pecas = new Peca[Linhas,Colunas];
         }
 
         public Peca peca(int linha, int coluna) {
