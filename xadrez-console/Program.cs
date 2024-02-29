@@ -46,6 +46,8 @@ namespace xadre_console
                         Console.ReadLine();
                     }
                 }
+                Console.Clear();
+                Tela.imprimirPartida(partida);
             }
             catch (TabulerioException e)
             {
