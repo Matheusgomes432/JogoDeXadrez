@@ -28,7 +28,6 @@ namespace xadre_console
                         Posicao origem = Tela.lerPosicaoXadrez().toPosicao();
                         partida.validarPosicaoDeOrigem(origem);
 
-
                         bool[,] posicoesPossiveis = partida.Tab.peca(origem).movimentosPossiveis();
 
                         Console.Clear();

@@ -19,7 +19,7 @@ namespace xadrez_console.tabuleiro
         {
             this.posicao = null;
             this.cor = cor;
-            QteMovimentos = 0;
+            this.QteMovimentos = 0;
             Tab = tab;
         }
 
